@@ -1,0 +1,19 @@
+
+<h1>Secciones Internas</h1>
+ 
+<table>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><img src="<%= article.portada %>" style=" max-width: 200px; margin: 20px 40px; "/></td>
+
+      <td><%= link_to 'Ver', article_path(article) %></td>
+      <td><%= link_to 'Editar', edit_article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div>
+<%= link_to 'Agregar nueva seccion', new_article_path %>
+  
+</div>

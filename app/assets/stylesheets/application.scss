@@ -1,0 +1,166 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */ 
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+h1{
+	font-family: 'Oswald', sans-serif;
+}
+header h2{
+	font-family: 'Indie Flower', cursive;
+
+}
+.logo img {
+	max-width: 240px;
+}
+body > aside{
+	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+	text-align: center;
+	padding: 50px;
+	color: #FFF;
+}
+header aside a{
+	color: #FFF;
+}
+section{
+	padding: 40px;
+	text-align: justify;
+}
+.feed {
+	text-align: center;
+	max-width: 80%;
+	margin: 10px auto 40px;
+	box-shadow: 0px 0px 12px #999;
+	border-radius: 5px;
+	padding: 30px;
+}
+img {
+	width: 100%;
+}
+.feed img {
+	max-width: 90%;
+	margin: 30px auto;
+}
+.feed a {
+	background-color: #09173f;
+	padding: 20px;
+	margin: 25px auto 0px;
+	display: block;
+	max-width: 150px;
+	border: solid 2px transparent;
+}
+.feed a:hover {
+	background: transparent;
+	color: #09173f;
+	border: solid 2px #09173f;
+}
+.bottom-content{
+	background: #09173f;
+	text-align: justify;
+}
+footer{
+		background: #333333;
+		color: #FFF;
+}
+footer img {
+	max-width: 200px;
+}
+footer a{
+	color: #FFF;
+}
+footer a:hover{
+	color: #DDD;				
+}
+.wthb{
+	background: #DDD;
+	text-align: center;
+}
+footer li {
+	list-style-image: url(/images/bullet.png);
+	margin: 7px -10px;
+}
+.quotes {
+	padding: 20px 0px;
+}
+.quotes p {
+	font-style: italic;
+	font-size: 16px;
+}
+.quotes p:before {
+	content: "'' ";
+	font-weight: bold;
+	font-size: 22px;
+}
+.quotes p:after {
+	content: "''";
+	font-size: 22px;
+	font-weight: bold;
+}
+.quotes h3 {
+	text-align: right;
+	font-size: 24px;
+}
+.quotes h3:before {
+	content: "- ";
+}
+
+body > header > aside {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+body > header > aside video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+body > header > aside .container {
+  position: relative;
+  z-index: 2;
+}
+
+body > header > aside .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  body > header > aside {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  body > header > aside video {
+    display: none;
+  }
+}
