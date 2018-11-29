@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  cover: MyString
+  location: MyString
+  day: 2018-11-28
+  time: 2018-11-28 17:27:22
+  typeevent: 1
+
+two:
+  title: MyString
+  description: MyText
+  cover: MyString
+  location: MyString
+  day: 2018-11-28
+  time: 2018-11-28 17:27:22
+  typeevent: 1
