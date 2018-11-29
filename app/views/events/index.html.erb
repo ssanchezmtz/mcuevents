@@ -2,6 +2,33 @@
 
 <h1>Asambleas y eventos</h1>
 
+<main>
+  <div class="feed"> 
+    <h2><%= @first_event.title %></h2>
+    <img src="<%= @first_event.cover %>">
+    <p><%= @first_event.description %></p>
+    <p><%= link_to 'Conoce más', @first_event %></p>
+  </div>
+</main>
+
+<section class="row">
+    <% @events.each do |event| %>
+      <div class="col">
+        <h3><%= event.title %></h3>
+        <img src="<%= event.cover %>" />
+        <p><%= event.description %></p>
+        <p><%= event.day %></p>
+        <p><%= event.time %></p>
+        <%= link_to 'Conoce más', event %>
+        <% if admin_signed_in? %>
+        <p><%= link_to 'Edit', edit_event_path(event) %></p>
+        <p><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <% end %>
+      </div>
+    <% end %>  
+</section>
+
+
 
 <table>
   <thead>
@@ -18,20 +45,7 @@
   </thead>
 
   <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.cover %></td>
-        <td><%= event.location %></td>
-        <td><%= event.day %></td>
-        <td><%= event.time %></td>
-        <td><%= event.typeevent %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+
   </tbody>
 </table>
 

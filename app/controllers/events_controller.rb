@@ -4,6 +4,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    @min = Event.minimum(:day)
+    @first_event = Event.where(day: @min).last()
     @events = Event.all 
   end
 

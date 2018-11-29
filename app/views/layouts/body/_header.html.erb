@@ -21,7 +21,17 @@
 		        <a class="nav-link" href="/articles/2">Contacto</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="/users/sign_in">Acceso</a>
+				<% if admin_signed_in? %>
+				<%= link_to('Salir', destroy_admin_session_path, method: :delete, class: "nav-link" ) %>        
+				<% end %>
+				<% if user_signed_in? %>
+				<%= link_to('Salir', destroy_user_session_path, method: :delete, class: "nav-link" ) %>        
+				<% else %>
+				<% if not admin_signed_in? %>
+				<%= link_to('Acceso', new_user_session_path, class: "nav-link")  %>  
+				<% end %>
+				<% end %>
+		       <!-- <a class="nav-link" href="/users/sign_in">Acceso</a>-->
 		      </li>
 
 		    </ul>
