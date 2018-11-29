@@ -1,39 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="details">
+<h1>Asambleas y Eventos</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<h2><%= @event.title %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+<div class="cover">
+    <img src="<%= @event.cover %>"/>
+</div>
 
-<p>
-  <strong>Cover:</strong>
-  <img src="<%= @event.cover %>"/>
-</p>
+<div class="description">
+  <p><%= @event.description %></p>
+<p>Fecha: <%= @event.day %> Hora: <%= @event.time.hour %>:<%= @event.time.min %></p>
+<p>Ubicación: <%= @event.location %></p>
+</div>
+</div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Day:</strong>
-  <%= @event.day %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @event.time %>
-</p>
-
-<p>
-  <strong>Typeevent:</strong>
-  <%= @event.typeevent %>
-</p>
-
+<aside>
+<%= link_to 'Asistir', edit_event_path(@event) %> 
+</aside>
+<aside>
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %> 
 <%= link_to 'Back', events_path %>
+</aside>

@@ -23,6 +23,7 @@
     <h1><%= @first_event.title %></h1>
     <img src="<%= @first_event.cover %>">
     <p><%= @first_event.description %></p>
-    <p><%= link_to 'Conoce más', @first_event %></p>
+    <%= link_to 'Conoce más', @first_event %>
+    <a class="second" href="/events">Otros eventos</a>
   </div>
 </main>

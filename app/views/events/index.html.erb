@@ -1,6 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Asambleas y eventos</h1>
 
 <main>
   <div class="feed"> 
@@ -14,41 +11,23 @@
 <section class="row">
     <% @events.each do |event| %>
       <div class="col">
-        <h3><%= event.title %></h3>
+        <h3><%= link_to event.title, event %></h3>
         <img src="<%= event.cover %>" />
         <p><%= event.description %></p>
-        <p><%= event.day %></p>
-        <p><%= event.time %></p>
-        <%= link_to 'Conoce más', event %>
+        <p>Fecha: <%= event.day %></p>
+        <p>Hora: <%= event.time.hour %> horas.</p>
+        <p><%= link_to 'Conoce más', event %></p>
         <% if admin_signed_in? %>
-        <p><%= link_to 'Edit', edit_event_path(event) %></p>
-        <p><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Editar', edit_event_path(event) %></p>
+        <p><%= link_to 'Eliminar', event, method: :delete, data: { confirm: '¿Estás seguro?' } %></p>
         <% end %>
       </div>
     <% end %>  
 </section>
+<% if admin_signed_in? %>
+<aside>
 
+        <%= link_to 'Nuevo evento', new_event_path %>
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Cover</th>
-      <th>Location</th>
-      <th>Day</th>
-      <th>Time</th>
-      <th>Typeevent</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
+</aside>
+<% end %>

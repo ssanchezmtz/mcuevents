@@ -20,34 +20,97 @@ h1{
 }
 header h2{
 	font-family: 'Indie Flower', cursive;
-
+}
+h3{
+	font-family: 'Oswald', sans-serif !important;
+    text-align: left;
 }
 .logo img {
 	max-width: 240px;
 }
+body > main{
+		background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+	    padding: 80px 0px;
+}
+
 body > aside{
-	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 	text-align: center;
 	padding: 50px;
 	color: #FFF;
 }
-header aside a{
+header aside a, 
+header aside a:hover{
 	color: #FFF;
 }
 section{
 	padding: 40px;
 	text-align: justify;
 }
+section p a {
+    background: #123;
+    padding: 16px 38px;
+    display: block;
+    max-width: 173px;
+    text-align: center;
+    margin: 21px auto;
+    color: #FFF;
+}
+
+body > aside a {
+    background: #de4348;
+    color: #fff;
+    padding: 20px 22px;
+    border: solid 2px transparent;
+    font-size: 24px;
+}
+
+body > aside a:hover {
+    background-color: #FFF;
+    color: #de4348;
+    border: solid 2px #de4348;
+}
+section p a:hover {
+    color: #FFF;
+}
 .feed {
-	text-align: center;
-	max-width: 80%;
-	margin: 10px auto 40px;
-	box-shadow: 0px 0px 12px #999;
-	border-radius: 5px;
-	padding: 30px;
+    text-align: center;
+    max-width: 678px;
+    box-shadow: 0px 0px 5px #888;
+    border-radius: 5px;
+    margin: auto;
+    background: #FFF;
+    padding: 30px;
 }
 img {
 	width: 100%;
+}
+footer .col-sm-4.offset-sm-1 {
+    padding-top: 10px;
+}
+
+footer .row {
+    width: 100%;
+}
+.cover img {
+    max-width: 80%;
+    margin: 40px auto !important;
+    display: block;
+}
+
+.details h1 {
+    text-align: center;
+    padding: 32px;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    color: #FFF;
+}
+.description {
+    padding: 24px 40px;
+    background: #eee;
+    margin: 50px;
+}
+
+.details h2 {
+    padding: 30px 30px 0px;
 }
 .feed img {
 	max-width: 90%;
@@ -55,11 +118,20 @@ img {
 }
 .feed a {
 	background-color: #09173f;
+	color: #FFF;
 	padding: 20px;
 	margin: 25px auto 0px;
 	display: block;
 	max-width: 150px;
 	border: solid 2px transparent;
+    display: inline-block;
+    margin: 0px 10px;
+}
+a.second,
+a.second:hover {
+    background: #FFF;
+    color: #de4348 !important;
+    border: solid 2px #de4348 !important;
 }
 .feed a:hover {
 	background: transparent;
