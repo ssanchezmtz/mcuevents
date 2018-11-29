@@ -1,5 +1,7 @@
 class TestimonialsController < ApplicationController
-  before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  
+
 
   # GET /testimonials
   # GET /testimonials.json
