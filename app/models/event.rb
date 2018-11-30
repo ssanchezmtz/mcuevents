@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-	belongs_to :user
-	  mount_uploader :cover, FileUploader
+	belongs_to :user, optional: true
+	mount_uploader :cover, FileUploader
 end
